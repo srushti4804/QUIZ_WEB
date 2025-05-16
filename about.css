@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section,
+.contact-section {
+  background: #bdbaba;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 4em;
+  width: 60%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-top: 0em;
+  color: rgba(0, 0, 0, 0.658);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin: 20px 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+a {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .contact-section {
+    width: 100%;
+  }
+}

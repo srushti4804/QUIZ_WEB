@@ -4,7 +4,7 @@ body {
   font-style: normal;
   margin: 0%;
   padding: 0%;
-  /* background-color: bisque; */
+  background-color: black;
   /* background-image: url("./image.png"); */
   background-size: cover;
   background-position: center;
@@ -17,11 +17,14 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: black;
-  width: 100%;
+
+  background-color: rgb(109, 181, 243);
+  width: 40%;
+  border-radius: 1.5em;
   padding: 20px 20px 20px 20px;
-  top: 0%;
-  left: 0%;
+  top: 2%;
+  left: 30%;
+  height: 1.8em;
   margin: 0%;
   z-index: 10;
 }
@@ -30,6 +33,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
+  margin-left: 1.5em;
 }
 
 .navbar a {
@@ -37,14 +41,23 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  /* margin-left: rem; */
   margin-right: 4rem;
   transition: 0.3s ease-in-out;
 }
+
+.navbar a:hover .navbar a.active {
+  border-bottom: 2px solid transparent;
+}
+
 .navbar a:hover {
   cursor: pointer;
-  color: yellow;
+  border-bottom: 2px solid white;
+
   transform: scale(1.2);
+}
+
+.navbar a.active {
+  border-bottom: 2px solid white;
 }
 
 .main {
@@ -52,7 +65,7 @@ body {
   height: 100vh;
 }
 .subject-grid {
-  margin-top: 8rem;
+  margin-top: 6rem;
   overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +80,6 @@ body {
   margin-right: 1.5%;
   width: 18em;
   height: 13em;
-  background-color: sienna;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -117,23 +129,31 @@ body {
 }
 
 .subject-box:nth-child(2) {
-  background-image: url("https://www.shutterstock.com/image-vector/cognitive-ability-skill-think-process-600nw-2195232273.jpg");
+  background-image: url("https://st2.depositphotos.com/3591429/6308/i/450/depositphotos_63082893-stock-photo-hands-holding-word-logic.jpg");
 }
 
 .subject-box:nth-child(3) {
-  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220509/pngtree-stock-market-computer-network-abstract-image_1345475.jpg");
+  background-image: url("https://media.gettyimages.com/id/1336438227/video/concept-of-students-distance-learning-or-business-womens-home-office-freelance-working-life.jpg?s=640x640&k=20&c=YwrNuhiQ-jqcq_fQcASHTEmutOZ1hQEHdn-ivMs_Pno=");
 }
 
 .subject-box:nth-child(4) {
-  background-image: url("https://images.wallpapersden.com/image/download/windows-operating-system-logo_Z2hnbm6UmZqaraWkpJRmbmdlrWZnZWU.jpg");
+  background-image: url("https://img.freepik.com/premium-vector/old-computer-desktop-with-hot-coffee-plant-vector-icon-illustration_138676-207.jpg");
 }
 
 .subject-box:nth-child(5) {
-  background-image: url("https://img.freepik.com/premium-vector/cyber-tree-concept-futuristic-technology_46706-873.jpg");
+  background-image: url("https://www.shutterstock.com/image-vector/oop-object-oriented-programming-acronym-260nw-2029215269.jpg");
 }
 
 .subject-box:nth-child(6) {
-  background-image: url("https://www.shutterstock.com/image-illustration/vivid-blue-digital-network-streaming-600nw-2430532289.jpg");
+  background-image: url("https://skill.webdroidedutech.com/wp-content/uploads/2024/10/dsaa.png");
+}
+
+.subject-box:nth-child(7) {
+  background-image: url("https://media.istockphoto.com/id/1352564117/vector/database-sql-structured-query-language-people-team-discuss-coding-for-storing-data-in-server.jpg?s=612x612&w=0&k=20&c=eRlvikJYlY8tJ8pVxgZFUv5GLgQbTy_rq18jKLZxq8A=");
+}
+
+.subject-box:nth-child(8) {
+  background-image: url("https://www.shutterstock.com/image-vector/business-problem-creative-solving-company-600nw-2471360879.jpg");
 }
 
 @media (max-width: 768px) {
@@ -144,15 +164,22 @@ body {
   .header {
     flex-direction: column;
     padding: 1.5em 0em 1em 0em;
+    width: 100%;
+    border-radius: none;
+    background-color: black;
+    left: 0%;
+    top: 0%;
+    height: 6em;
+
     .logo {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 3em;
+      margin-left: 0em;
     }
     .navbar {
       margin-top: 1em;
-      display: none;
       a {
         margin: 1em;
       }
@@ -166,7 +193,7 @@ body {
       padding: 0em;
       height: auto;
       flex-direction: row;
-      margin-top: 6em;
+      margin-top: 8em;
 
       .subject-box {
         width: 80%;
