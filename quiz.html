@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="quiz.css" />
-  </head>
-  <body>
-    <div class="outer">
-      <div id="question-container">
-        <!-- progress bar -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+
+<body>
+  <div class="outer">
+    <div id="question-container">
+      <!-- progress bar -->
+      <div class="p">
         <div class="progress-bar">
-        <div id="progress"></div>
-        </div>
-
-        <!-- question itself -->
-        <div class="question-text">
-          <h3 id="question-number"></h3>
-          <h2 id="question-text"></h2>
-        </div>
-
-        <!-- options -->
-        <div class="option-container" id="option-container">
-          <div class="options" data-option="0"></div>
-          <div class="options" data-option="1"></div>
-          <div class="options" data-option="2"></div>
-          <div class="options" data-option="3"></div>
-        </div>
-
-        <div class="action-buttons">
-          <button id="back-btn">Back</button>
-          <button id="next-btn">Next</button>
+          <div id="progress"></div>
         </div>
       </div>
-    </div>
-    
 
-    <script src="questionBank.js"></script>
-    <script src="quiz.js"></script>
-  </body>
+      <!-- question itself -->
+      <div class="question-text">
+        <h3 id="question-number"></h3>
+        <h2 id="question-text"></h2>
+      </div>
+
+      <!-- options -->
+      <div class="option-container" id="option-container">
+        <div class="options" data-option="0"></div>
+        <div class="options" data-option="1"></div>
+        <div class="options" data-option="2"></div>
+        <div class="options" data-option="3"></div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="back-btn">Back</button>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="questionBank.js"></script>
+  <script src="quiz.js"></script>
+</body>
+
 </html>

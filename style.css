@@ -66,11 +66,11 @@ body {
   margin-left: 1.5%;
   margin-right: 1.5%;
   width: 18em;
-  height: 25%;
+  height: 13em;
   background-color: sienna;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: relative;
   background-size: cover;
   background-position: center;
@@ -136,3 +136,56 @@ body {
   background-image: url("https://www.shutterstock.com/image-illustration/vivid-blue-digital-network-streaming-600nw-2430532289.jpg");
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow: scroll;
+    background-color: black;
+  }
+  .header {
+    flex-direction: column;
+    padding: 1.5em 0em 1em 0em;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+    }
+    .navbar {
+      margin-top: 1em;
+      display: none;
+      a {
+        margin: 1em;
+      }
+    }
+  }
+  .main {
+    overflow: scroll;
+    .subject-grid {
+      justify-content: center;
+      align-items: start;
+      padding: 0em;
+      height: auto;
+      flex-direction: row;
+      margin-top: 6em;
+
+      .subject-box {
+        width: 80%;
+        height: 13em;
+        margin: 1em;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: all 0.5s ease-out;
+      }
+      .subject-box.show {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .test {
+        margin-top: 1em;
+      }
+      .last {
+        margin-bottom: 5em;
+      }
+    }
+  }
+}

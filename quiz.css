@@ -22,6 +22,11 @@ body {
     flex-direction: column;
     padding: 0.5em;
   }
+  .p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .progress-bar {
     width: 80%;
     height: 10px;
@@ -31,95 +36,88 @@ body {
     margin-top: 40px;
     margin-bottom: 30px;
     margin-left: 40px;
-    
   }
-  
+
   #progress {
     height: 80%;
     width: 0%;
     background-color: green;
     transition: width 0.4s ease;
-    
   }
-  
-  
-    .question-text {
-      height: 15%;
+
+  .question-text {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    h2,
+    h3 {
+      font-size: 2em;
+    }
+  }
+  .option-container {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .options {
+      height: 20%;
+      margin: 1%;
+      width: 50%;
+      border-radius: 0.2em;
       display: flex;
-      flex-direction: row;
-      align-items: center;
       justify-content: center;
-      h2,
-      h3 {
-        font-size: 2em;
-      }
-    }
-    .option-container {
-      height: 55%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      .options {
-        height: 20%;
-        margin: 1%;
-        width: 50%;
-        border-radius: 0.2em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.6em;
-        background-color: rgb(141, 181, 255);
-        font-weight: 100;
-        cursor: pointer;
-        transition: 0.5s transform ease-in-out;
-        &:hover {
-          transform: scale(1.02);
-          box-shadow: 2px 2px 5px rgba(27, 30, 32, 0.561);
-        }
-      }
-      .options.correct {
-        background: #44db67; /* Green when correct */
-        color: #fff;
-        transition: 0.5s;
-      }
-      .options.incorrect {
-        background: #dc3545; /* Red when incorrect */
-        color: #fff;
-        transition: 0.5s;
+      font-size: 1.6em;
+      background-color: rgb(141, 181, 255);
+      font-weight: 100;
+      cursor: pointer;
+      transition: 0.5s transform ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 2px 2px 5px rgba(27, 30, 32, 0.561);
       }
     }
-    .action-buttons {
-      height: 10%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0em 1em;
-      margin-top: 10px;
-      button {
-        border: none;
-        color: white;
-        background-color: black;
-        font-size: 1em;
-        border-radius: 0.5em;
-        width: 15%;
-        height: 65%;
-        transition: all ease-in-out 0.2s;
-        cursor: pointer;
-        &:hover {
-          color: black;
-          background-color: rgba(128, 128, 128, 0.651);
-        }
+    .options.correct {
+      background: #44db67; /* Green when correct */
+      color: #fff;
+      transition: 0.5s;
+    }
+    .options.incorrect {
+      background: #dc3545; /* Red when incorrect */
+      color: #fff;
+      transition: 0.5s;
+    }
+  }
+  .action-buttons {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1em;
+    margin-top: 10px;
+    button {
+      border: none;
+      color: white;
+      background-color: black;
+      font-size: 1em;
+      border-radius: 0.5em;
+      width: 15%;
+      height: 65%;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        background-color: rgba(128, 128, 128, 0.651);
       }
     }
-  
+  }
 }
 
 .result-container {
-  
-  
-
   width: 100%;
   height: 100%;
   text-align: center;
@@ -140,23 +138,26 @@ body {
   border-radius: 50%;
   margin: 0 auto 20px;
   margin-top: 3.5rem;
-  background-color: #e9ecef; 
-    background-image:  conic-gradient(#28a745 0deg var(--progress-degrees, 0deg), #e9ecef calc(var(--progress-degrees, 0deg) + 0.1deg) 360deg);
-    animation: fillProgress 1s ease-in-out forwards;
+  background-color: #e9ecef;
+  background-image: conic-gradient(
+    #28a745 0deg var(--progress-degrees, 0deg),
+    #e9ecef calc(var(--progress-degrees, 0deg) + 0.1deg) 360deg
+  );
+  animation: fillProgress 1s ease-in-out forwards;
 }
 @keyframes fillProgress {
-    from {
-        --progress-degrees: 0deg;
-    }
-    to {
-        --progress-degrees: var(--progress-degrees);
-    }
+  from {
+    --progress-degrees: 0deg;
   }
+  to {
+    --progress-degrees: var(--progress-degrees);
+  }
+}
 
 .inner-circle {
   border: none;
   position: absolute;
-  
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -167,32 +168,69 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
-.percentage{
+.percentage {
   font-size: 2rem;
   font-weight: bold;
   color: black;
 }
-.score{
+.score {
   font-size: 1.2rem;
-    color: black;
-    margin-top: 8px;
+  color: black;
+  margin-top: 8px;
 }
 
-.dashboard-btn{
+.dashboard-btn {
   padding: 10px 20px;
   margin-top: 1rem;
   border-radius: 7px;
-  background-color:  #007bff;
+  background-color: #007bff;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 0.9rem;
-  transition:  0.3s ease-in-out;
-
+  transition: 0.3s ease-in-out;
 }
-.dashboard-btn:hover{
+.dashboard-btn:hover {
   background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+  .outer {
+    justify-content: center;
+    align-items: center;
+    #question-container {
+      width: 100%;
+      height: 70vh;
+      margin-top: -4em;
+    }
+    .progress-bar {
+      display: flex;
+      align-items: center;
+      margin: 2em 1em;
+    }
+    .question-text {
+      height: 15%;
+      align-items: start;
+      h2,
+      h3 {
+        font-size: 1.1em;
+        margin: 1em 0em;
+      }
+      #question-number {
+        margin-right: 0.5em;
+      }
+    }
+    .option-container {
+      .options {
+        width: 80%;
+        font-size: 1em;
+      }
+    }
+    .action-buttons {
+      button {
+        width: 25%;
+      }
+    }
+  }
+}
