@@ -141,7 +141,7 @@ body {
   background-color: #e9ecef;
   background-image: conic-gradient(
     #28a745 0deg var(--progress-degrees, 0deg),
-    #e9ecef calc(var(--progress-degrees, 0deg) + 0.1deg) 360deg
+    #e9ecef var(--progress-degrees, 0deg) 360deg
   );
   animation: fillProgress 1s ease-in-out forwards;
 }
